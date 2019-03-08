@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blog Title - Safe operator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+          <h1><a href="/">Index</a></h1>
+          <a class="twitter-follow-button" href="https://twitter.com/londerson" data-size="large">@londerson</a>
+          <hr>
+        </div>
+
+        <div class="col-md-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+          <h4 id="safe-operator---ruby-23">Safe operator - Ruby 2.3</h4>
+
+<p>Algumas vezes há necessidade de verificar se um determinado método de um determinado objeto existe. Em ruby, para realizar essa operação
+(antes do <code>safe operator</code>) fazíamos o seguinte:</p>
+
+<pre><code> if person &amp;&amp; person.name
+</code></pre>
+
+<p>Dessa forma, saberíamos se existia um objeto <code>person</code> e se nele havia também um método <code>name</code>. Ademais, caso <code>person</code> fosse <code>nil</code>,
+e fizéssemos uma chamada método <code>name</code>, o retorno seria um erro: <code>NoMethodError: undefined method</code>.</p>
+
+<pre><code> nil.name # NoMethodError: undefined method ‘name’ for nil:NilClass
+</code></pre>
+
+<p>Contudo, com a ajuda do <code>ActiveSuport</code> do framework <code>Rails</code>, ou seja, não é uma ação nativa da linguagem,
+poderíamos verificar da seguinte forma:</p>
+
+<pre><code> person.try(:name)
+</code></pre>
+
+<p>Caso o objeto ou o método não existissem, o retorno não seria um <code>NoMethodError</code> e sim um <code>nil</code>.</p>
+
+<p>Após o lançamento do Ruby 2.3, o operador <code>safe navigator</code> foi adicionado, e podemos verificar de maneira similar ao método <code>try</code>
+do <code>Active Suport</code>, utilizando apenas o ampersand (&amp;) antes de chamar o método:</p>
+
+<pre><code> person&amp;.name
+</code></pre>
+<hr />
+
+<div id="disqus_thread"></div>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+        </div>
+
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://londerson-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </body>
+</html>
+
