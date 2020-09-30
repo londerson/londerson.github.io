@@ -1,4 +1,6 @@
 .hljs {
+  margin-top: -15px;
+  margin-bottom: -15px;
   border-radius: 5px;
   padding: 0px !important;
 }
