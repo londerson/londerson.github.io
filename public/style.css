@@ -2,6 +2,11 @@ body {
   font-size: 0.9em;
 }
 
+.main-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 p {
   margin-bottom: 0.9em;
   margin-block-start: 0.9em;
