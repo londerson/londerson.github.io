@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blog Title - Safe operator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai.min.css">
+    <link rel="stylesheet" href="./../public/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75410775-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-75410775-1');
+    </script>
+  </head>
+
+  <body>
+    <div class="container main-container">
+      <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+          <h1><a href="/">main</a></h1>
+          Follow me on Twitter: <a class="twitter-follow-button" href="https://twitter.com/londerson" data-size="large">@londerson</a>
+          <hr>
+        </div>
+
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+          <h4 id="safe-operator---ruby-23">Tempo de compilacao e tempo de execução</h4>
+          <p>
+            São termos utilizados para distinguir dois momentos distintos na construção de um software. Tempo de compilação, ou compiling-time, é o momento em que o código-fonte é convertido em um código de máquina, enquanto o tempo de execução, ou runtime, é o momento em que o código de máquina está sendo executado.
+          </p>
+          <p>
+            Durante a faze de compilação o código fonte é <a href="https://en.wikipedia.org/wiki/Parsing" target="_blank">parseado</a>, tem sua sintaxe, semântica e bibliotecas verificadas, para então criar um executável, que pode ser um código de máquina, como saída. Enquanto na fase de execução, ou running time, um novo processo é criado com o código de saída (ou seja, um código binário, ou um código de máquina, etc.) Durante a execução, depois da compilação, os erros produzidos são inesperados, portanto, não são detectados pelo compilador.
+          </p>
+
+          <p><i>Exemplo de erro de compilação:</i></p>
+
+<pre>
+  <code>
+  #include &lt;iostream&gt;
+
+  int main() {
+    int number_one = 1;
+    std::cout << number_one
+  }
+
+  #error: expected ';' after expression
+  </code>
+</pre>
+
+        <p><i>Exemplo de erro de execução:</i></p>
+
+<pre>
+  <code>
+  #include &lt;iostream&gt;
+
+  int main() {
+   int number_one  = 1;
+   int number_zero = 0;
+   std::cout << number_zero / number_zero;
+  }
+
+  #error: Floating point exception
+  </code>
+</pre>
+
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+          <div id="disqus_thread"></div>
+        </div>
+
+        <div class="col-md-1"></div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+<script>
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://londerson-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
