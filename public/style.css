@@ -1,5 +1,16 @@
 body {
   font-size: 0.9em;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  line-height: 1.30769231;
+  color: #242829;
+}
+
+a {
+  color: #0064bd;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .main-container {
@@ -7,19 +18,23 @@ body {
   margin-bottom: 15px;
 }
 
-p {
-  margin-bottom: 0.9em;
-  margin-block-start: 0.9em;
-  margin-block-end: 0.9em;
-}
-
 .hljs {
   margin-top: -15px;
   margin-bottom: -15px;
   border-radius: 5px;
   padding: 0px !important;
+  background-color: #f6f8f8;
 }
 
 pre code {
-  line-height: 1.2 !important;
+  font-size: 1em;
+  //line-height: 1.2 !important;
+  color: #242729 !important;
+}
+
+code.custom {
+  border-radius: 3px;
+  padding: 2px 4px;
+  color: #242729;
+  background-color: #e4e6e8;
 }
