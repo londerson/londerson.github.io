@@ -19,22 +19,10 @@ h1 {
 }
 
 .hljs {
-  margin-top: -15px;
-  margin-bottom: -15px;
-  border-radius: 5px;
-  padding: 0px !important;
-  background-color: #f6f8f8;
-}
-
-pre code {
-  font-size: 1em;
-  //line-height: 1.2 !important;
-  color: #242729 !important;
-}
-
-code.custom {
   border-radius: 3px;
-  padding: 2px 4px;
-  color: #242729;
-  background-color: #e4e6e8;
+  padding: 15px !important;
+}
+
+code {
+  color: #444444;
 }
