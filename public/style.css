@@ -20,10 +20,10 @@ h1 {
 
 .hljs {
   border-radius: 3px;
-  padding: 7.5px;
-  background-color: #f6f6f6;
+  padding: 15px;
+  background-color: #f6f6f6 !important;
 }
 
-code {
-  //color: #0000dd;
+code.hljs {
+  border: 1px solid #ccc;
 }
