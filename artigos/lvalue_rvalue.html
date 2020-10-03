@@ -5,13 +5,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Tempo de compilação e tempo de execução</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/ascetic.min.css">
+    <title>C++ Anotações & Referência</title>
     <link rel="stylesheet" href="./../public/style.css">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75410775-1"></script>
     <script>
@@ -25,23 +21,8 @@
 
   <body>
     <div class="container main-container">
-      <div class="row">
-        <div class="col-md-2"></div>
 
-        <div class="col-md-8">
-          <h1><a href="/">main</a></h1>
-          Follow me on Twitter: <a class="twitter-follow-button" href="https://twitter.com/londerson" data-size="large">@londerson</a>
-          <hr>
-        </div>
-
-        <div class="col-md-2"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-2"></div>
-
-        <div class="col-md-8">
-<h4>Lvalue e Rvalue</h4>
+<h1>Lvalue e Rvalue</h1>
 <p><code>lvalue</code> e <code>rvalue</code> são termos que ocorrem em mensagens de erro no tempo de compilação, geralmente sem entregar um significado claro do que está ocorrendo, como nos exemplos abaixo: </p>
 <pre><code>int number() { return 4; }
 int main() {
@@ -82,26 +63,7 @@ int main() {
 </code></pre>
 <p>Agora que a função <code>number()</code> está retornando uma referência, ou seja, um endereço localizado na memória, pode ser atribuída ao <code>rvalue</code> <code>10</code>.</p>
 
-          <div id="disqus_thread" style="margin-top: 30px;"></div>
-        </div>
-        <div class="col-md-2"></div>
-      </div>
     </div>
-
   </body>
 </html>
 
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-<script>
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://londerson-github-io.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
